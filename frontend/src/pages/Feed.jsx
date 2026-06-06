@@ -31,20 +31,6 @@ function Feed() {
   const navigate = useNavigate();
   const dropdownRef = useRef(null);
 
-  useEffect(() => {
-    fetchPosts(1, true);
-  }, [fetchPosts]);
-
-  useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
-        setDropdownOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
   const fetchPosts = useCallback(async (pageNum, reset) => {
     try {
       const res = await axios.get(
@@ -61,6 +47,21 @@ function Feed() {
       console.log(err);
     }
   }, []);
+
+  useEffect(() => {
+    fetchPosts(1, true);
+  }, [fetchPosts]);
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setDropdownOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
 
   const loadMore = useCallback(async () => {
     if (loadingMore || !hasMore) return;
