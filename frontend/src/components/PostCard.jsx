@@ -2,7 +2,6 @@ import { useState } from "react";
 import axios from "axios";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { FaRegComment } from "react-icons/fa";
-import EmojiPicker from "emoji-picker-react";
 
 const avatarColors = [
   "#4f8ef7", "#e53935", "#43a047", "#fb8c00",

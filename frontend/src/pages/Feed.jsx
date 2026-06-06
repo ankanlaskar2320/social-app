@@ -33,7 +33,7 @@ function Feed() {
 
   useEffect(() => {
     fetchPosts(1, true);
-  }, []);
+  }, [fetchPosts]);
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -531,13 +531,6 @@ const styles = {
   feed: { 
     flex: 1, 
     minWidth: 0 
-  },
-  createBox: { 
-    backgroundColor: "#fff", 
-    borderRadius: "12px", 
-    padding: "20px", 
-    marginBottom: "16px", 
-    boxShadow: "0 1px 4px rgba(0,0,0,0.08)" 
   },
   createBottom: { 
     display: "flex", 
