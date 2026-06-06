@@ -39,7 +39,7 @@ function PostCard({ post, onUpdate, onDelete }) {
   const handleLike = async () => {
     try {
       const res = await axios.put(
-        `http://localhost:5000/api/posts/${post._id}/like`,
+        `https://social-app-backend-qulo.onrender.com/api/posts/${post._id}/like`,
         {},
         { headers: { authorization: token } }
       );
@@ -56,7 +56,7 @@ function PostCard({ post, onUpdate, onDelete }) {
     }
     try {
       const res = await axios.post(
-        `http://localhost:5000/api/posts/${post._id}/comment`,
+        `https://social-app-backend-qulo.onrender.com/api/posts/${post._id}/comment`,
         { text: comment },
         { headers: { authorization: token } }
       );
@@ -71,7 +71,7 @@ function PostCard({ post, onUpdate, onDelete }) {
   const handleDelete = async () => {
     if (!window.confirm("Are you sure you want to delete this post?")) return;
     try {
-      await axios.delete(`http://localhost:5000/api/posts/${post._id}`, {
+      await axios.delete(`https://social-app-backend-qulo.onrender.com/api/posts/${post._id}`, {
         headers: { authorization: token }
       });
       onDelete();

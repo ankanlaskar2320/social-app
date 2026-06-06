@@ -11,7 +11,7 @@ function Signup() {
 
   const handleSignup = async () => {
     try {
-      await axios.post("http://localhost:5000/api/auth/signup", {
+      await axios.post("https://social-app-backend-qulo.onrender.com/api/auth/signup", {
         name,
         email,
         password

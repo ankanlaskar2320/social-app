@@ -48,7 +48,7 @@ function Feed() {
   const fetchPosts = useCallback(async (pageNum, reset) => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/posts?page=${pageNum}&limit=5`
+        `https://social-app-backend-qulo.onrender.com/api/posts?page=${pageNum}&limit=5`
       );
       if (reset) {
         setPosts(res.data.posts);
@@ -81,7 +81,7 @@ function Feed() {
 
     setLoading(true);
     try {
-      await axios.post("http://localhost:5000/api/posts", formData, {
+      await axios.post("https://social-app-backend-qulo.onrender.com/api/posts", formData, {
         headers: {
           authorization: token,
           "Content-Type": "multipart/form-data"
@@ -124,7 +124,7 @@ function Feed() {
       if (editEmail) body.email = editEmail;
       if (editPassword) body.password = editPassword;
 
-      const res = await axios.put("http://localhost:5000/api/auth/update", body, {
+      const res = await axios.put("https://social-app-backend-qulo.onrender.com/api/auth/update", body, {
         headers: { authorization: token }
       });
 
