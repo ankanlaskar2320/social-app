@@ -216,7 +216,7 @@ const styles = {
   username: {
     margin: 0,
     fontWeight: "600",
-    fontSize: "14px",
+    fontSize: "18px",
     color: "#1a1a1a"
   },
   date: {
@@ -225,7 +225,7 @@ const styles = {
     color: "#999"
   },
   text: {
-    fontSize: "15px",
+    fontSize: "22px",
     color: "#333",
     marginBottom: "12px",
     lineHeight: "1.6"
@@ -279,7 +279,8 @@ const styles = {
     display: "flex",
     alignItems: "flex-start",
     gap: "8px",
-    marginBottom: "10px"
+    marginBottom: "10px",
+    fontSize: "12px"
   },
   commentAvatar: {
     width: "28px",

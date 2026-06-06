@@ -566,7 +566,7 @@ const styles = {
   filterBtn: { 
     padding: "8px 18px", 
     borderRadius: "20px", 
-    fontSize: "13px", 
+    fontSize: "16px", 
     cursor: "pointer", 
     fontWeight: "500" 
   },
@@ -735,7 +735,7 @@ const styles = {
   createTitle: {
     margin: "0 0 12px 0",
     fontWeight: "700",
-    fontSize: "16px",
+    fontSize: "22px",
     color: "#1a1a1a"
   },
   textarea: {
@@ -743,7 +743,7 @@ const styles = {
     padding: "12px",
     borderRadius: "8px",
     border: "1px solid #e0e0e0",
-    fontSize: "14px",
+    fontSize: "18px",
     resize: "none",
     height: "80px",
     boxSizing: "border-box",
